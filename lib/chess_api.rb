@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "chess_api/version"
+require_relative 'chess_api/version'
 
 module ChessApi
-  class Error < StandardError; end
-  # Your code goes here...
+  autoload :Client, 'chess_api/client'
+  autoload :Error, 'chess_api/error'
+  autoload :Object, 'chess_api/object'
+  autoload :Player, 'chess_api/objects/player'
 end

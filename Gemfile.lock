@@ -3,6 +3,7 @@ PATH
   specs:
     chess_api (0.1.0)
       faraday (~> 1.7)
+      faraday_middleware (~> 1.1)
 
 GEM
   remote: https://rubygems.org/
@@ -27,6 +28,8 @@ GEM
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
+    faraday_middleware (1.1.0)
+      faraday (~> 1.0)
     multipart-post (2.1.1)
     rake (13.0.6)
     rspec (3.10.0)
