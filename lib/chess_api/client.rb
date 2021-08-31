@@ -12,16 +12,8 @@ module ChessApi
     end
 
     def get_player(username:)
-      res = connection.get("player/#{username}")
-
-      if res.success?
-        ChessApi::Player.from_response(res)
-      else
-        ChessApi::Error.new("Error requesting #{} from Chess.com")
-      end
+      PlayerResource.new(self).retrieve(username)
     end
-
-    private
 
     def connection
       @connection ||= Faraday.new do |conn|
