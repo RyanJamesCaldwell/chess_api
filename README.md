@@ -1,9 +1,6 @@
 # ChessApi
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/chess_api`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
-
+`chess_api` is a gem that wraps [Chess.com's Published-Data API](https://www.chess.com/news/view/published-data-api).
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -22,7 +19,33 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+To interact with the `ChessApi`, you'll first need to create a client object. You have the option of specifying a [Faraday adapter](https://lostisland.github.io/faraday/adapters/).
+
+```ruby
+client = ChessApi::Client.new
+# or
+client = ChessApi::Client.new(adapter: your_adapter_here)
+```
+
+From there, you'll be able to perform several operations:
+
+### Fetch a player on Chess.com by username
+
+```ruby
+irb(main):001:0> player = ChessApi::Client.new.get_player(username: "RyanJCaldwell")
+
+=> #<ChessApi::Player:0x000000013a8102f0 @attributes=#<OpenStruct player_id=58419494, @id="https://api.chess.com/pub/player/ryanjcaldwell", url="https://www.chess.com/member/RyanJCaldwell", name="Ryan Caldwell", username="ryanjcaldwell", followers=8, country="https://api.chess.com/pub/country/US", last_online=1630532095, joined=1552396179, status="basic", is_streamer=false>>
+irb(main):002:0> player.username
+=> "ryanjcaldwell"
+
+irb(main):003:0> player.url
+=> "https://www.chess.com/member/RyanJCaldwell"
+
+irb(main):004:0> player.is_streamer
+=> false
+```
+
+As you can see in the example above, you can access the fields returned by the Chess.com API through standard Ruby method syntax.
 
 ## Development
 
@@ -32,4 +55,9 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/chess_api.
+Bug reports and pull requests are welcome on GitHub at https://github.com/RyanJamesCaldwell/chess_api.
+
+
+## License
+
+The gem is available as open source under the terms of the MIT License.
