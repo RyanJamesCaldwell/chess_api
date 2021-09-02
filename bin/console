@@ -11,5 +11,11 @@ require "chess_api"
 # require "pry"
 # Pry.start
 
+client = ChessApi::Client.new
+
+puts
+puts "We've created a 'client' variable as a ChessApi::Client."
+puts
+
 require "irb"
 IRB.start(__FILE__)
