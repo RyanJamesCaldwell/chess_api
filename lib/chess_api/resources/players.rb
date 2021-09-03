@@ -1,8 +1,9 @@
 module ChessApi
   class PlayerResource < Resource
-    def retrieve(username)
-      username = username&.downcase
-      get_request("player/#{username}", ChessApi::Player)
+    def retrieve(username:)
+      response = get_request("player/#{username&.downcase}")
+
+      ChessApi::Player.new(response.body)
     end
   end
 end

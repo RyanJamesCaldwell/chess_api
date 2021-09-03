@@ -11,8 +11,8 @@ module ChessApi
       @adapter = adapter
     end
 
-    def get_player(username:)
-      PlayerResource.new(self).retrieve(username)
+    def player
+      PlayerResource.new(self)
     end
 
     def connection

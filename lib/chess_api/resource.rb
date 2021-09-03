@@ -8,16 +8,14 @@ module ChessApi
 
     private
 
-    def get_request(endpoint, klass = Hash)
-      handle_response(
-        client.connection.get(endpoint),
-        klass
-      )
+    def get_request(endpoint)
+      handle_response(client.connection.get(endpoint))
     end
 
-    def handle_response(response, klass)
+    def handle_response(response)
       raise ChessApi::Error, "An error happened while making your request" unless response.success?
-      ChessApi.build_object(response.body, klass)
+
+      response
     end
   end
 end

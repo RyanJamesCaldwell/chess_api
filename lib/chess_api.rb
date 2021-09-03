@@ -6,6 +6,7 @@ module ChessApi
   autoload :Client, 'chess_api/client'
   autoload :Resource, 'chess_api/resource'
   autoload :Object, 'chess_api/object'
+  autoload :Collection, 'chess_api/collection'
   autoload :Error, 'chess_api/error'
 
   # Objects
