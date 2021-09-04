@@ -12,6 +12,7 @@ module ChessApi
   # Objects
   autoload :Player, 'chess_api/objects/player'
   autoload :TitledPlayer, 'chess_api/objects/titled_player'
+  autoload :Club, 'chess_api/objects/club'
 
   # Resources
   autoload :PlayerResource, 'chess_api/resources/players'

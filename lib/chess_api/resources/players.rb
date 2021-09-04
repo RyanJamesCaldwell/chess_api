@@ -21,6 +21,16 @@ module ChessApi
       is_online ? OnlineStatus::ONLINE : OnlineStatus::OFFLINE
     end
 
+    def clubs(username:)
+      @username = username
+
+      ChessApi::Collection.from_response(
+        get_request("player/#{downcased_username}/clubs"),
+        key: "clubs",
+        type: ChessApi::Club
+      )
+    end
+
     private
 
     def downcased_username
