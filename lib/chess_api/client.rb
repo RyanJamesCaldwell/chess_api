@@ -15,6 +15,10 @@ module ChessApi
       PlayerResource.new(self)
     end
 
+    def titled_player
+      TitledPlayerResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new do |conn|
         conn.url_prefix = BASE_URL

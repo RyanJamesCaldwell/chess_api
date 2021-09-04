@@ -11,9 +11,11 @@ module ChessApi
 
   # Objects
   autoload :Player, 'chess_api/objects/player'
+  autoload :TitledPlayer, 'chess_api/objects/titled_player'
 
   # Resources
   autoload :PlayerResource, 'chess_api/resources/players'
+  autoload :TitledPlayerResource, 'chess_api/resources/titled_players'
 
   def self.build_object(data, klass)
     return data unless data.is_a?(Hash)
