@@ -1,9 +1,30 @@
 module ChessApi
   class PlayerResource < Resource
-    def retrieve(username:)
-      response = get_request("player/#{username&.downcase}")
 
-      ChessApi::Player.new(response.body)
+    module OnlineStatus
+      ONLINE = "online",
+      OFFLINE = "offline"
+    end
+
+    def retrieve(username:)
+      @username = username
+
+      ChessApi::Player.new(
+        get_request("player/#{downcased_username}").body
+      )
+    end
+
+    def online_status(username:)
+      @username = username
+      is_online = get_request("player/#{downcased_username}/is-online").body["online"]
+
+      is_online ? OnlineStatus::ONLINE : OnlineStatus::OFFLINE
+    end
+
+    private
+
+    def downcased_username
+      @username&.downcase
     end
   end
 end
