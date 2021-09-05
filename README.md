@@ -99,6 +99,17 @@ irb(main):002:0> clubs.data.map { |club| [club.name, club.joined] }
  ["Fiona's Fight Club", 1616428995]]
 ```
 
+### Fetching the monthly game archive links for a player on Chess.com
+```ruby
+irb(main):001:0> result = client.monthly_game_archive.list(username: "ryanjcaldwell")
+=>
+#<ChessApi::Collection:0x0000000153351480
+...
+
+irb(main):002:0> result.data.first.url
+=> "https://api.chess.com/pub/player/ryanjcaldwell/games/2019/03"
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
