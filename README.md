@@ -1,6 +1,8 @@
 # ChessApi
 
 `chess_api` is a gem that wraps [Chess.com's Published-Data API](https://www.chess.com/news/view/published-data-api).
+
+[![Gem Version](https://badge.fury.io/rb/chess_api.svg)](https://badge.fury.io/rb/chess_api)
 ## Installation
 
 Add this line to your application's Gemfile:
@@ -70,10 +72,10 @@ irb(main):001:0> client.titled_player.with_title(title_abbreviation: "WGM")
 ### Fetching a player's online status on Chess.com
 ```ruby
 irb(main):001:0> client.player.online_status(username: "hikaru")
-=> false
+=> "offline"
 
 irb(main):002:0> client.player.online_status(username: "ryanjcaldwell")
-=> true
+=> "online"
 ```
 
 ### Fetching the clubs that a player belongs to on Chess.com
