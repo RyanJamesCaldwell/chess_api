@@ -4,17 +4,20 @@ require_relative 'chess_api/version'
 
 module ChessApi
   autoload :Client, 'chess_api/client'
-  autoload :Resource, 'chess_api/resource'
-  autoload :Object, 'chess_api/object'
   autoload :Collection, 'chess_api/collection'
   autoload :Error, 'chess_api/error'
+  autoload :InputHelpers, 'chess_api/input_helpers'
+  autoload :Object, 'chess_api/object'
+  autoload :Resource, 'chess_api/resource'
 
   # Objects
+  autoload :Club, 'chess_api/objects/club'
+  autoload :MonthlyGameArchive, 'chess_api/objects/monthly_game_archive'
   autoload :Player, 'chess_api/objects/player'
   autoload :TitledPlayer, 'chess_api/objects/titled_player'
-  autoload :Club, 'chess_api/objects/club'
 
   # Resources
+  autoload :MonthlyGameArchiveResource, 'chess_api/resources/monthly_game_archives'
   autoload :PlayerResource, 'chess_api/resources/players'
   autoload :TitledPlayerResource, 'chess_api/resources/titled_players'
 
