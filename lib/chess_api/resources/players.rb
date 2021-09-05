@@ -2,7 +2,7 @@ module ChessApi
   class PlayerResource < Resource
 
     module OnlineStatus
-      ONLINE = "online",
+      ONLINE = "online"
       OFFLINE = "offline"
     end
 
