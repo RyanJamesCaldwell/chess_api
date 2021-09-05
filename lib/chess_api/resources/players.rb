@@ -1,5 +1,6 @@
 module ChessApi
   class PlayerResource < Resource
+    include InputHelpers
 
     module OnlineStatus
       ONLINE = "online"
@@ -29,12 +30,6 @@ module ChessApi
         key: "clubs",
         type: ChessApi::Club
       )
-    end
-
-    private
-
-    def downcased_username
-      @username&.downcase
     end
   end
 end
