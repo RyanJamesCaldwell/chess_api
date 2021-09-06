@@ -23,6 +23,10 @@ module ChessApi
       MonthlyGameArchiveResource.new(self)
     end
 
+    def daily_puzzle
+      DailyPuzzleResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new do |conn|
         conn.url_prefix = BASE_URL
