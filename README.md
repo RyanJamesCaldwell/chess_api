@@ -110,6 +110,40 @@ irb(main):002:0> result.data.first.url
 => "https://api.chess.com/pub/player/ryanjcaldwell/games/2019/03"
 ```
 
+### Fetching the Daily Puzzle from Chess.com
+```ruby
+irb(main):001:0> daily_puzzle = client.daily_puzzle.retrieve
+=>
+#<ChessApi::DailyPuzzle:0x000000012d98b218
+...
+
+irb(main):002:0> daily_puzzle.title
+=> "Disconnecting Connection"
+
+irb(main):003:0> daily_puzzle.pgn
+=> "[Result \"*\"]\r\n[FEN \"3rb3/5pk1/2n1pn1p/rp3Pp1/6P1/1P2B2P/2R3BK/R3N3 w - - 0 1\"]\r\n\r\n1.Rxa5 Nxa5 2.Bb6 Rd1 3.Bxa5 *"
+
+irb(main):004:0> daily_puzzle.image
+=> "https://www.chess.com/dynboard?fen=3rb3/5pk1/2n1pn1p/rp3Pp1/6P1/1P2B2P/2R3BK/R3N3%20w%20-%20-%200%201&size=2"
+```
+
+### Fetching a random Daily Puzzle from Chess.com
+```ruby
+irb(main):001:0> random_daily_puzzle = client.daily_puzzle.random
+=>
+#<ChessApi::DailyPuzzle:0x000000014740e5a0
+...
+
+irb(main):002:0> random_daily_puzzle.publish_time
+=> 1306047600
+
+irb(main):003:0> random_daily_puzzle.pgn
+=> "[Date \"????.??.??\"]\r\n[Result \"*\"]\r\n[FEN \"1B6/1p4Rp/p4kp1/8/8/8/Pr4PP/6K1 b - - 0 1\"]\r\n\r\n1...Rb1+ 2. Kf2 Kxg7\r\n*"
+
+irb(main):004:0> random_daily_puzzle.url
+=> "https://www.chess.com/forum/view/daily-puzzles/5222011---eluding-danger"
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
