@@ -1,6 +1,7 @@
 ## [Unreleased]
 
 - Added #monthly_game_archive, returns a `Collection` of `MonthlyGameArchive` objects.
+- Added daily_puzzle#retrieve and daily_puzzle#random
 
 ## [0.1.1] - 2021-09-05
 
