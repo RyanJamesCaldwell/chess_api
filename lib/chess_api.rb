@@ -22,9 +22,4 @@ module ChessApi
   autoload :MonthlyGameArchiveResource, 'chess_api/resources/monthly_game_archives'
   autoload :PlayerResource, 'chess_api/resources/players'
   autoload :TitledPlayerResource, 'chess_api/resources/titled_players'
-
-  def self.build_object(data, klass)
-    return data unless data.is_a?(Hash)
-    klass.new(data)
-  end
 end
