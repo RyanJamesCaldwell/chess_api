@@ -144,6 +144,28 @@ irb(main):004:0> random_daily_puzzle.url
 => "https://www.chess.com/forum/view/daily-puzzles/5222011---eluding-danger"
 ```
 
+### Fetching streamers on Chess.com
+```ruby
+irb(main):001:0> streamers = client.streamer.list
+=>
+#<ChessApi::Collection:0x000000013a5bd7a0
+...
+
+irb(main):002:0> streamers.data.first
+=>
+#<ChessApi::Streamer:0x000000013a49b200
+ @attributes=
+  #<OpenStruct username="QTCinderella", avatar="https://betacssjs.chesscomfiles.com/bundles/web/images/noavatar_l.84a92436.gif", twitch_url="https://twitch.tv/QTCinderella", url="https://www.chess.com/member/QTCinderella", is_live=true>>
+
+irb(main):003:1* streamers.data.first(3).map do |streamer|
+irb(main):004:1*   [streamer.url, streamer.twitch_url, streamer.is_live]
+irb(main):005:0> end
+=>
+[["https://www.chess.com/member/QTCinderella", "https://twitch.tv/QTCinderella", true],
+ ["https://www.chess.com/member/GMKrikor", "https://twitch.tv/gmkrikor", true],
+ ["https://www.chess.com/member/jppeixoto29", "https://twitch.tv/jppeixoto29", true]]
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
