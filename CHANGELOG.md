@@ -1,5 +1,7 @@
 ## [Unreleased]
 
+- Added streamer#list, returns a `Collection` of `Streamer` objects
+
 # [0.2.1] - 2021-09-06
 
 - Added #monthly_game_archive, returns a `Collection` of `MonthlyGameArchive` objects.

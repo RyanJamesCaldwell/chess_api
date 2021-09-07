@@ -15,11 +15,13 @@ module ChessApi
   autoload :DailyPuzzle, 'chess_api/objects/daily_puzzle'
   autoload :MonthlyGameArchive, 'chess_api/objects/monthly_game_archive'
   autoload :Player, 'chess_api/objects/player'
+  autoload :Streamer, 'chess_api/objects/streamer'
   autoload :TitledPlayer, 'chess_api/objects/titled_player'
 
   # Resources
   autoload :DailyPuzzleResource, 'chess_api/resources/daily_puzzles'
   autoload :MonthlyGameArchiveResource, 'chess_api/resources/monthly_game_archives'
   autoload :PlayerResource, 'chess_api/resources/players'
+  autoload :StreamerResource, 'chess_api/resources/streamers'
   autoload :TitledPlayerResource, 'chess_api/resources/titled_players'
 end

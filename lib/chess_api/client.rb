@@ -11,20 +11,24 @@ module ChessApi
       @adapter = adapter
     end
 
-    def player
-      PlayerResource.new(self)
-    end
-
-    def titled_player
-      TitledPlayerResource.new(self)
+    def daily_puzzle
+      DailyPuzzleResource.new(self)
     end
 
     def monthly_game_archive
       MonthlyGameArchiveResource.new(self)
     end
 
-    def daily_puzzle
-      DailyPuzzleResource.new(self)
+    def player
+      PlayerResource.new(self)
+    end
+
+    def streamer
+      StreamerResource.new(self)
+    end
+
+    def titled_player
+      TitledPlayerResource.new(self)
     end
 
     def connection
