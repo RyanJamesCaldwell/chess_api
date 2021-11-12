@@ -1,11 +1,11 @@
 # frozen_string_literal: true
 
-require 'faraday'
-require 'faraday_middleware'
+require "faraday"
+require "faraday_middleware"
 
 module ChessApi
   class Client
-    BASE_URL = 'https://api.chess.com/pub/'
+    BASE_URL = "https://api.chess.com/pub/"
 
     def initialize(adapter: Faraday.default_adapter)
       @adapter = adapter
@@ -35,7 +35,7 @@ module ChessApi
       @connection ||= Faraday.new do |conn|
         conn.url_prefix = BASE_URL
         conn.request :json
-        conn.response :json, content_type: 'application/json'
+        conn.response :json, content_type: "application/json"
         conn.adapter @adapter
       end
     end

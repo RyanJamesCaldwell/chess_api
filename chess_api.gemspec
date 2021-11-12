@@ -3,14 +3,14 @@
 require_relative "lib/chess_api/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "chess_api"
-  spec.version       = ChessApi::VERSION
-  spec.authors       = ["Ryan Caldwell"]
-  spec.email         = ["ryanjcaldwell4@gmail.com"]
+  spec.name = "chess_api"
+  spec.version = ChessApi::VERSION
+  spec.authors = ["Ryan Caldwell"]
+  spec.email = ["ryanjcaldwell4@gmail.com"]
 
-  spec.summary       = "chess_api is a gem that wraps the Chess.com API."
-  spec.description   = "chess_api is a gem that wraps the Chess.com API."
-  spec.homepage      = "https://github.com/RyanJamesCaldwell/chess_api"
+  spec.summary = "chess_api is a gem that wraps the Chess.com API."
+  spec.description = "chess_api is a gem that wraps the Chess.com API."
+  spec.homepage = "https://github.com/RyanJamesCaldwell/chess_api"
   spec.required_ruby_version = ">= 2.4.0"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
@@ -26,8 +26,8 @@ Gem::Specification.new do |spec|
       (f == __FILE__) || f.match(%r{\A(?:(?:test|spec|features)/|\.(?:git|travis|circleci)|appveyor)})
     end
   end
-  spec.bindir        = "exe"
-  spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
+  spec.bindir = "exe"
+  spec.executables = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
   spec.add_dependency "faraday", "~> 1.7"
