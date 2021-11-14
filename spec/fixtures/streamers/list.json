@@ -1,0 +1,26 @@
+{
+  "streamers":
+  [
+     {
+        "username": "GMBenjaminFinegold",
+        "avatar": "https://images.chesscomfiles.com/uploads/v1/user/32076054.611f6b88.50x50o.b34120ef650c.jpeg",
+        "twitch_url": "https://twitch.tv/gmbenjaminfinegold",
+        "url": "https://www.chess.com/member/GMBenjaminFinegold",
+        "is_live": true
+     },
+     {
+        "username": "chesscomPT",
+        "avatar": "https://images.chesscomfiles.com/uploads/v1/user/33392983.ad5b4aa4.50x50o.676567fbbeb1.png",
+        "twitch_url": "https://twitch.tv/chesscompt",
+        "url": "https://www.chess.com/member/chesscomPT",
+        "is_live": true
+     },
+     {
+        "username": "annacramling",
+        "avatar": "https://images.chesscomfiles.com/uploads/v1/user/70349336.17b54bac.50x50o.8d1033e49488.jpeg",
+        "twitch_url": "https://twitch.tv/annacramling",
+        "url": "https://www.chess.com/member/annacramling",
+        "is_live": false
+     }
+   ]
+}
