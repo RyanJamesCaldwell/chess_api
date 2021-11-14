@@ -1,0 +1,8 @@
+{
+  "title": "Garry-Go-Round",
+  "url": "https://www.chess.com/forum/view/daily-puzzles/11-13-2021-garry-go-round",
+  "publish_time": 1636790400,
+  "fen": "2r2k2/pp4q1/1n2prb1/7R/4B2Q/6P1/P4P2/1R4K1 w - - 0 34",
+  "pgn": "[Event \"Sarajevo\"]\r\n[Site \"Sarajevo\"]\r\n[Date \"1999.05.19\"]\r\n[Round \"3\"]\r\n[White \"Kasparov, Garry\"]\r\n[Black \"Short, Nigel D\"]\r\n[Result \"1-0\"]\r\n[WhiteElo \"2812\"]\r\n[BlackElo \"2697\"]\r\n[FEN \"2r2k2/pp4q1/1n2prb1/7R/4B2Q/6P1/P4P2/1R4K1 w - - 0 34\"]\r\n\r\n34.Rh8+ Kf7 35.Rxc8 Nxc8 36.Rxb7+ Ne7 37.Bxg6+ Qxg6 38.Qb4 1-0",
+  "image": "https://www.chess.com/dynboard?fen=2r2k2/pp4q1/1n2prb1/7R/4B2Q/6P1/P4P2/1R4K1%20w%20-%20-%200%2034&size=2"
+}

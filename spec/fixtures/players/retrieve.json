@@ -1,0 +1,18 @@
+{
+  "@id": "URL",
+  "url": "URL",
+  "username": "test_username",
+  "player_id": 41,
+  "title": "IM",
+  "status": "basic",
+  "name": "firstname lastname",
+  "avatar": "URL",
+  "location": "San Diego, California",
+  "country": "URL",
+  "joined": 1178556600,
+  "last_online": 1500661803,
+  "followers": 17,
+  "is_streamer": "true",
+  "twitch_url": "https://twitch.tv",
+  "fide": 1200
+}
