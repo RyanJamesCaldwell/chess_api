@@ -4,6 +4,8 @@
 
 [![Gem Version](https://badge.fury.io/rb/chess_api.svg)](https://badge.fury.io/rb/chess_api)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
+![CI](https://github.com/RyanJamesCaldwell/chess_api/actions/workflows/ruby.yml/badge.svg?branch=main)
+
 ## Installation
 
 Add this line to your application's Gemfile:
