@@ -7,8 +7,9 @@ module ChessApi
   class Client
     BASE_URL = "https://api.chess.com/pub/"
 
-    def initialize(adapter: Faraday.default_adapter)
+    def initialize(adapter: Faraday.default_adapter, stubs: nil)
       @adapter = adapter
+      @stubs = stubs
     end
 
     def daily_puzzle
@@ -36,7 +37,7 @@ module ChessApi
         conn.url_prefix = BASE_URL
         conn.request :json
         conn.response :json, content_type: "application/json"
-        conn.adapter @adapter
+        conn.adapter @adapter, @stubs
       end
     end
   end

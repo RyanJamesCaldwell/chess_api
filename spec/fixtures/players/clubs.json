@@ -1,0 +1,20 @@
+{
+  "clubs": [
+      {
+         "@id": "club-url",
+         "name": "Club One",
+         "last_activity": 12345,
+         "icon": "club-icon-url",
+         "url": "url-to-club",
+         "joined": 123
+      },
+      {
+         "@id": "club-two-url",
+         "name": "Club Two",
+         "last_activity": 12345,
+         "icon": "club-two-icon-url",
+         "url": "url-to-club-two",
+         "joined": 123
+      }
+  ]
+}
