@@ -11,6 +11,7 @@ Gem::Specification.new do |spec|
   spec.summary = "chess_api is a gem that wraps the Chess.com API."
   spec.description = "chess_api is a gem that wraps the Chess.com API."
   spec.homepage = "https://github.com/RyanJamesCaldwell/chess_api"
+  spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 2.4.0"
 
   # spec.metadata["allowed_push_host"] = "TODO: Set to 'https://mygemserver.com'"
