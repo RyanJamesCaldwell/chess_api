@@ -1,12 +1,19 @@
 # ChessApi
 
-`chess_api` is a gem that wraps [Chess.com's Published-Data API](https://www.chess.com/news/view/published-data-api).
-
 [![Gem Version](https://badge.fury.io/rb/chess_api.svg)](https://badge.fury.io/rb/chess_api)
 [![Ruby Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://github.com/testdouble/standard)
 ![CI](https://github.com/RyanJamesCaldwell/chess_api/actions/workflows/ruby.yml/badge.svg?branch=main)
 
+
+`chess_api` is a gem that wraps [Chess.com's Published-Data API](https://www.chess.com/news/view/published-data-api).
+
 ## Installation
+
+### Codespaces
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=401188229)
+
+### Add to an existing project
 
 Add this line to your application's Gemfile:
 
