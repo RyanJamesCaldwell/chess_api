@@ -38,6 +38,7 @@ module ChessApi
         conn.request :json
         conn.response :json, content_type: "application/json"
         conn.adapter @adapter, @stubs
+        conn.headers["User-Agent"] = ChessApi.configuration.user_agent
       end
     end
   end
