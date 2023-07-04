@@ -4,14 +4,19 @@
 require "bundler/setup"
 require "chess_api"
 
-# You can add fixtures and/or initialization code here to make experimenting
-# with your gem easier. You can also use a different console, if you like.
-
-# (If you use this, don't forget to add pry to your Gemfile!)
-# require "pry"
-# Pry.start
+ChessApi.configure do |config|
+  # config.user_agent = "your_email@example.com"
+end
 
 client = ChessApi::Client.new
+
+if ChessApi.configuration.user_agent.nil?
+  puts
+  puts <<~MESSAGE
+  ***WARNING*** Chess.com now requires a User Agent for the developer making API requests. This can be your Chess.com username, email, etc.
+  To use the console with no issues, edit the `chess_api/bin/console.rb` file to add your user agent.
+  MESSAGE
+end
 
 puts
 puts "We've created a 'client' variable as a ChessApi::Client."
