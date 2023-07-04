@@ -5,6 +5,7 @@ require_relative "chess_api/version"
 module ChessApi
   autoload :Client, "chess_api/client"
   autoload :Collection, "chess_api/collection"
+  autoload :Configuration, "chess_api/configuration"
   autoload :Error, "chess_api/error"
   autoload :InputHelpers, "chess_api/input_helpers"
   autoload :Object, "chess_api/object"
@@ -24,4 +25,20 @@ module ChessApi
   autoload :PlayerResource, "chess_api/resources/players"
   autoload :StreamerResource, "chess_api/resources/streamers"
   autoload :TitledPlayerResource, "chess_api/resources/titled_players"
+
+  class << self
+    attr_accessor :configuration
+  end
+
+  def self.configuration
+    @configuration ||= Configuration.new
+  end
+
+  def self.reset
+    @configuration = Configuration.new
+  end
+
+  def self.configure
+    yield(configuration)
+  end
 end
